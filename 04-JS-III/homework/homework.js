@@ -30,7 +30,8 @@ function incrementarPorUno(array) {
   // Aumenta cada entero por 1
   // y devuelve el array
   // Tu código:
-
+  var array1 = array.map((elemento) => elemento + 1)
+  return array1;
 }
 
 
@@ -38,6 +39,9 @@ function agregarItemAlFinalDelArray(array, elemento) {
   // Añade el "elemento" al final del array
   // y devuelve el array
   // Tu código:
+  array.push(elemento)
+  return array
+
 }
 
 
@@ -178,23 +182,20 @@ function todosIguales(arreglo) {
 function mesesDelAño(array) {
   //Dado un array que contiene algunos meses del año desordenados, recorrer el array buscando los meses de 
   // "Enero", "Marzo" y "Noviembre", guardarlo en nuevo array y retornarlo.
-  //Si alguno de los meses no está, devolver: "No se encontraron los meses pedidos"
+  //Si alguno de los meses no está, devolver: 
   // Tu código:
-  var meses = []
-  for (let i = 0; i < arreglo.length - 1 ; i++){
-    if(array[i] === "Enero" || array [i] === "Marzo"||array [i] === "Noviembre"){
+  let meses = []
+  for (var i = 0; i < array.length; i++){
+    if(array[i] === "Enero" || array[i] === "Marzo" || array[i] === "Noviembre"){
       meses.push(array[i]);
     }
   }
-  if (meses.length <3){
-    return "No se encontraron los meses pedidos";
-  }
-      else{
-        return meses;
-      }
+  if (meses.length === 3) return meses;
+      else return "No se encontraron los meses pedidos";
+      
     }
 
-
+  
 
 
 function mayorACien(array) {
@@ -202,7 +203,7 @@ function mayorACien(array) {
   //valores mayores a 100 (no incluye el 100). Finalmente devolver el nuevo array.
   // Tu código:
   var arrayCien = []
-  for (let i = 0; i < arreglo.length - 1 ; i++){
+  for (let i = 0; i < array.length - 1 ; i++){
     if (array[i] > 100) {
       arrayCien.push(array[i]);
     }
@@ -232,7 +233,7 @@ function breakStatement(numero) {
   if(i<10){
     return "Se interrumpió la ejecución";}
     else{
-      return array;
+      return arr;
     }
   }
 
