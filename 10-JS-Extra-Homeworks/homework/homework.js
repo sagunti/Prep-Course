@@ -28,6 +28,8 @@ function numberOfCharacters(string) {
   //en formato par clave-valor.
   //Ej: Recibe ---> "adsjfdsfsfjsdjfhacabcsbajda" || Devuelve ---> { a: 5, b: 2, c: 2, d: 4, f: 4, h:1, j: 4, s: 5 } 
   //Escribe tu código aquí
+
+  /*
   const obj = {};
   for (let i = 0; i < string.length; i++){
   if(obj.hasOwnProperty(string[i])){
@@ -39,7 +41,19 @@ else obj[string[i]] = 1
   };
 return obj;
 }
+*/
 
+var obj={}
+
+for (let i=0; i < string.length; i++){
+  if(Object.keys(obj).includes(string[i])){
+    obj[string[i]] = obj[string[i]] + 1
+  continue;
+  }
+  obj[string[i]] = 1
+}
+return obj;
+}
 
 function capToFront(s) {
   //Realiza una función que reciba como parámetro un string y mueva todas las letras mayúsculas
